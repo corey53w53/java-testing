@@ -3,30 +3,11 @@ public class test {
     public static void main(String[] args) {
         test myObj = new test();
         System.out.println(myObj.x);
-        Person havish = new Person();
-        havish.incrementAge();
-        System.out.println(havish.age);
-        System.out.println(havish);
 
-        Point p1 = new Point(3,4);
-
+        Point p1 = new Point(-3,0);
         System.out.println(p1);
-
-    }
-}
-
-class Person {
-    int age =15;
-    public Person(){
-        System.out.println("I am " + age + " years old.");
-    }
-    public void incrementAge(){
-        this.age+=1;
-    }
-
-    @Override
-    public String toString(){
-        return "I am " + this.age + " years old";
+        p1.moveToOrigin();
+        System.out.println(p1);
     }
 }
 
@@ -38,6 +19,21 @@ class Point {
         this.y=y;
         System.out.println("init");
     }
+
+    public void moveToOrigin(){
+        if (this.x<0){
+            this.x+=1;
+        } else if (this.x>0){
+            this.x-=1;
+        }
+        if (this.y<0){
+            this.y+=1;
+        } else if (this.y>0){
+            this.y-=1;
+        }
+
+    }
+
     @Override
     public String toString(){
         return "("+x+","+y+")";
