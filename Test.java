@@ -2,8 +2,9 @@ public class test {
     public static void main(String[] args) {
         Point p1 = new Point(-3,0);
         Point p2 = new Point(0,2);
-        Point p3 = p1.add(p2);
+        Point p3 = p1.subtract(p2);
         System.out.println(p3);
+        
     }
 }
 class Point {
@@ -27,9 +28,16 @@ class Point {
             this.y-=1;
         }
     }
+
     public Point add(Point p2){
         int new_x = this.x+p2.x;
         int new_y = this.y+p2.y;
+        return new Point(new_x,new_y);
+    }
+
+    public Point subtract(Point p2){
+        int new_x = this.x-p2.x;
+        int new_y = this.y-p2.y;
         return new Point(new_x,new_y);
     }
 
