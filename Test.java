@@ -8,6 +8,10 @@ public class test {
         System.out.println(havish.age);
         System.out.println(havish);
 
+        Point p1 = new Point(3,4);
+
+        System.out.println(p1);
+
     }
 }
 
@@ -25,3 +29,19 @@ class Person {
         return "I am " + this.age + " years old";
     }
 }
+
+class Point {
+    int x;
+    int y;
+    public Point(int x, int y){
+        this.x=x;
+        this.y=y;
+        System.out.println("init");
+    }
+    @Override
+    public String toString(){
+        return "("+x+","+y+")";
+    }
+}
+
+// ================================
