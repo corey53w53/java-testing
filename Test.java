@@ -4,16 +4,18 @@ public class test {
         Point p2 = new Point(0,2);
         Point p3 = p1.subtract(p2);
         System.out.println(p3);
-        
+        String name = "Corey";
+        name.chars().forEach(System.out::println);
+
     }
 }
+
 class Point {
     int x;
     int y;
     public Point(int x, int y){
         this.x=x;
         this.y=y;
-        System.out.println("init");
     }
 
     public void moveToOrigin(){
